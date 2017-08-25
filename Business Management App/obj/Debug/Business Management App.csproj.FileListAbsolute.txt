@@ -1,0 +1,54 @@
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\bin\Debug\Business Management App.exe.config
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\bin\Debug\Business Management App.exe
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\bin\Debug\Business Management App.pdb
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business Management App.csprojResolveAssemblyReference.cache
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Form1.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Properties.Resources.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business Management App.csproj.GenerateResource.Cache
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business Management App.exe
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business Management App.pdb
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\bin\Debug\ShopDataBase.mdf
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\bin\Debug\ShopDataBase_log.ldf
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Category.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Purchase_Order.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Customer.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.View_Customers.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Product.resources
+C:\Users\jaafar\Desktop\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Vendor.resources
+C:\Users\Student\Desktop\New folder\Business Management App\master\Business Management App\bin\Debug\Business Management App.exe.config
+C:\Users\Student\Desktop\New folder\Business Management App\master\Business Management App\obj\Debug\Business Management App.exe
+C:\Users\Student\Desktop\New folder\Business Management App\master\Business Management App\obj\Debug\Business Management App.pdb
+C:\Business Management App\Business Management App\bin\Debug\Business Management App.exe.config
+C:\Business Management App\Business Management App\obj\Debug\Business Management App.exe
+C:\Business Management App\Business Management App\obj\Debug\Business Management App.pdb
+C:\Business Management App\Business Management App\bin\Debug\ShopDataBase.mdf
+C:\Business Management App\Business Management App\bin\Debug\ShopDataBase_log.ldf
+C:\Business Management App\Business Management App\bin\Debug\Business Management App.exe
+C:\Business Management App\Business Management App\bin\Debug\Business Management App.pdb
+C:\Business Management App\Business Management App\obj\Debug\Business Management App.csprojResolveAssemblyReference.cache
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Category.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Customer.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Purchase_Order.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Vendor.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Form1.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.Properties.Resources.resources
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.View_Customers.resources
+C:\Business Management App\Business Management App\obj\Debug\Business Management App.csproj.GenerateResource.Cache
+C:\Business Management App\Business Management App\obj\Debug\Business_Management_App.View_Vendors.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\bin\Debug\Business Management App.exe.config
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business Management App.exe
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business Management App.pdb
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\bin\Debug\ShopDataBase.mdf
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\bin\Debug\ShopDataBase_log.ldf
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\bin\Debug\Business Management App.exe
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\bin\Debug\Business Management App.pdb
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business Management App.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Category.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Customer.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Purchase_Order.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Add_Vendor.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Form1.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.Properties.Resources.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.View_Customers.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business_Management_App.View_Vendors.resources
+C:\Users\Student\Desktop\New folder\Business Management App\Business Management App\obj\Debug\Business Management App.csproj.GenerateResource.Cache

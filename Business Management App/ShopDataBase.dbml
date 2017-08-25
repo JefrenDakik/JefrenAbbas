@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShopDataBase" Class="ShopDataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\ShopDataBase.mdf;Integrated Security=True" SettingsObjectName="Business_Management_App.Properties.Settings" SettingsPropertyName="ShopDataBaseConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Arrival_Days" Member="Arrival_Days">
+    <Type Name="Arrival_Day">
+      <Column Name="Day" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Arrival_Day_Vendor_Arrival_Day" Member="Vendor_Arrival_Days" ThisKey="Day" OtherKey="Day" Type="Vendor_Arrival_Day" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Category_Product" Member="Products" ThisKey="Name" OtherKey="Category" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CPL_Product" Member="CPL_Products">
+    <Type Name="CPL_Product">
+      <Column Name="CPL_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Product_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_Purchase_List_CPL_Product" Member="Customer_Purchase_List" ThisKey="CPL_Id" OtherKey="Id" Type="Customer_Purchase_List" IsForeignKey="true" />
+      <Association Name="Product_CPL_Product" Member="Product" ThisKey="Product_Id" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Phone_Number" Type="System.String" DbType="NChar(8)" CanBeNull="true" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Customer_Customer_Purchase_List" Member="Customer_Purchase_Lists" ThisKey="Id" OtherKey="Customer_Id" Type="Customer_Purchase_List" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer_Purchase_List" Member="Customer_Purchase_Lists">
+    <Type Name="Customer_Purchase_List">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Total_Amount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Amount_Paid" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Customer_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_Purchase_List_CPL_Product" Member="CPL_Products" ThisKey="Id" OtherKey="CPL_Id" Type="CPL_Product" />
+      <Association Name="Customer_Customer_Purchase_List" Member="Customer" ThisKey="Customer_Id" OtherKey="Id" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PPL_Product" Member="PPL_Products">
+    <Type Name="PPL_Product">
+      <Column Name="PPL_Invoice_Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Vendor_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Product_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_PPL_Product" Member="Product" ThisKey="Product_Id" OtherKey="Id" Type="Product" IsForeignKey="true" />
+      <Association Name="Product_Purchase_List_PPL_Product" Member="Product_Purchase_List" ThisKey="PPL_Invoice_Number,Vendor_Id" OtherKey="Invoice_Number,Vendor_Id" Type="Product_Purchase_List" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Buy_Price" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Sell_Price" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Total_Unit_Price" Type="System.Single" DbType="Real" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Product_CPL_Product" Member="CPL_Products" ThisKey="Id" OtherKey="Product_Id" Type="CPL_Product" />
+      <Association Name="Product_PPL_Product" Member="PPL_Products" ThisKey="Id" OtherKey="Product_Id" Type="PPL_Product" />
+      <Association Name="Category_Product" Member="Category1" ThisKey="Category" OtherKey="Name" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product_Purchase_List" Member="Product_Purchase_Lists">
+    <Type Name="Product_Purchase_List">
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Total_Amount_Paid" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Total_Amount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Vendor_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Invoice_Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Product_Purchase_List_PPL_Product" Member="PPL_Products" ThisKey="Invoice_Number,Vendor_Id" OtherKey="PPL_Invoice_Number,Vendor_Id" Type="PPL_Product" />
+      <Association Name="Vendor_Product_Purchase_List" Member="Vendor" ThisKey="Vendor_Id" OtherKey="Id" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendor" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone_Number" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Vendor_Product_Purchase_List" Member="Product_Purchase_Lists" ThisKey="Id" OtherKey="Vendor_Id" Type="Product_Purchase_List" />
+      <Association Name="Vendor_Vendor_Arrival_Day" Member="Vendor_Arrival_Days" ThisKey="Id" OtherKey="Vendor_Id" Type="Vendor_Arrival_Day" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendor_Arrival_Days" Member="Vendor_Arrival_Days">
+    <Type Name="Vendor_Arrival_Day">
+      <Column Name="Day" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Vendor_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Arrival_Day_Vendor_Arrival_Day" Member="Arrival_Day" ThisKey="Day" OtherKey="Day" Type="Arrival_Day" IsForeignKey="true" />
+      <Association Name="Vendor_Vendor_Arrival_Day" Member="Vendor" ThisKey="Vendor_Id" OtherKey="Id" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
